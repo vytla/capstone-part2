@@ -173,10 +173,74 @@ What did your research find?
 
 The predictions from the above model exhibit a slightly lower trend than the test data, indicating that the model consistently underestimates the test values. This discrepancy suggests that the current model might not be capturing all the relevant patterns or complexities in the data. 
 
+## Part 2
+
+### Artificial Neural Networks(ANNs) 
+ANNs provide a powerful and flexible approach for time series forecasting, leveraging their ability to model complex, non-linear relationships and adapt to various data characteristics. Following are some of the advantanges of ANNs when applying to time series forecasting. 
+
+- Non Linearity
+- Feature Extraction
+- Parallel processing 
+- Combining multiple inputs
+- Complex Pattern Recognition 
+
+### Modeling 
+
+#### LSTM Model 
+Long Short-Term Memory (LSTM) models are a type of recurrent neural network (RNN) that are particularly well-suited for time series forecasting due to their ability to learn long-term dependencies.
+
+##### Process followed to implement LSTM Model for Time Series Forecasting
+
+- Data Perperation
+    - Normalization :Scale the data to a range suitable for the activation functions, usually between 0 and 1
+- Model Building 
+    - Define the Model :Specify the architecture, including the number of LSTM layers and units.
+    - Compile the Model: Choose an optimizer (e.g., Adam) and a loss function (e.g., Mean Squared Error).
+- Model Training 
+    - Training Data: Split the dataset into training and validation sets.
+    - Training Process: Train the model using the training data and validate its performance using the validation data.
+- Model Evaluation
+    - Performance Metrics: Use metrics such as Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), or others relevant to the forecasting problem.
+- Model Prediction
+    - Forecasting: Use the trained model to make predictions on new data.
+
+Here is the graph depicting the LSTM loss for both the training and validation sets
+
+<img src="images/lstm_loss.png" width="350" height="200">
+
+
+
+### GRU(Gated Recurrent Unit) Model
+
+Gated Recurrent Unit (GRU) models are a type of recurrent neural network (RNN) similar to Long Short-Term Memory (LSTM) networks but with a simpler architecture. GRUs address the vanishing gradient problem and are often used in time series forecasting for their efficiency and effectiveness in learning temporal dependencies.
+
+Same process followed as LSTM for sales forecasting and here is the graph depicting the GRU loss for both the training and validation sets
+
+
+  <img src="images/gru_loss.png" width="350" height="200">
+
+
+
+### Cross Validation 
+
+Used TimeSeriesSplit instead of K-Fold cross validation because K-fold uses random data and future test data will have train data from previous runs. 
+
+Following are the Root Mean Squared Error for LSTM & RSU Models.
+
+- Root Mean Squared Error for LSTM:   0.012789976257357893
+- Root Mean Squared Error for GRU:    0.010907032673513412
+
+Overall, GRU model has better Root Mean Squared Error and applying this model will improve accuracy in sales forecasting. 
+
+###  Forecasting
+
+Using LSTM and GRU models, sales were forecasted based on the validation dataset, and the following graph illustrates the projected future sales.
+
+<img src="images/Forecast.png" width="350" height="200">
+
+
+
+
 ### Next steps
 
-Following are some of the techniques need to be considered to improve model performance and better prede tions. 
-
-- Exploring alternative models from Nural Networks
-- Techniques like K-Fold Cross-Validation can provide a more accurate measure of model performance
-- Addressing Model Bias.
+As part of an ongoing strategy, continuously applying and optimizing models with the latest AI/ML advancements in neural networks will significantly enhance the accuracy of sales forecasting. This iterative process involves regularly updating models to incorporate cutting-edge techniques and algorithms, ensuring they remain effective in capturing evolving market trends and customer behaviors. By leveraging the most advanced neural network models, businesses can achieve more precise sales predictions, leading to better inventory management, optimized pricing strategies, and overall improved decision-making. Ultimately, this will drive greater efficiency, competitiveness, and profitability for the business.
