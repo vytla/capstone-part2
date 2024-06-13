@@ -206,7 +206,7 @@ Long Short-Term Memory (LSTM) models are a type of recurrent neural network (RNN
 
 Here is the graph depicting the LSTM loss for both the training and validation sets
 
-<img src="images/lstm_loss.png" width="350" height="200">
+<img src="images/LSTM_Loss.png" width="350" height="200">
 
 
 
@@ -217,7 +217,7 @@ Gated Recurrent Unit (GRU) models are a type of recurrent neural network (RNN) s
 Same process followed as LSTM for sales forecasting and here is the graph depicting the GRU loss for both the training and validation sets
 
 
-  <img src="images/gru_loss.png" width="350" height="200">
+  <img src="images/GRU_Loss.png" width="350" height="200">
 
 
 
