@@ -1,7 +1,7 @@
 
 ## Sales Forecasting
 
-[Link to Notebook](https://github.com/vytla/capstone-part1/blob/main/sales-forecasting-1.ipynb)
+[Link to Notebook](https://github.com/vytla/capstone-part2/blob/main/sales-forecasting-part-2.ipynb)
 
 ### Executive summary
 
